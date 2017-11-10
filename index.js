@@ -10,7 +10,7 @@ exports.subscribe = function subscribe(event, callback) {
 
     console.log(event.data.id);
 
-    https.get('https://api.makusafe.com/v1/incidentLocation?id=' + event.data.id, (resp) => {
+    https.get('https://api.makusafe.com/v1/incident?id=' + event.data.id, (resp) => {
         let data = '';
 
         // A chunk of data has been recieved.
