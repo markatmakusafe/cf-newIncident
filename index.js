@@ -8,10 +8,9 @@ const https = require('https');
 
 exports.subscribe = function subscribe(event, callback) {
     // The Cloud Pub/Sub Message object.
-    const pubsubMessage = event.data;
-
-    let reqObject = JSON.parse(pubsubMessage);
-    console.log(reqObject.id);
+    console.log(event.data);
+    let reqObject = JSON.parse(event.data);
+    console.log(reqObject);
 
     /*
     https.get('https://api.makusafe.com/v1/incidentLocation', (resp) => {
