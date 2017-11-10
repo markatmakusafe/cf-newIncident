@@ -29,5 +29,4 @@ exports.subscribe = function subscribe(event, callback) {
         });
 
     // Don't forget to call the callback.
-
   };
