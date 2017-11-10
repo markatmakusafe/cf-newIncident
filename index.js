@@ -7,13 +7,10 @@
 const https = require('https');
 
 exports.subscribe = function subscribe(event, callback) {
-    // The Cloud Pub/Sub Message object.
-    console.log(event.data);
-    //let reqObject = JSON.parse(event.data);
+
     console.log(event.data.id);
 
-    /*
-    https.get('https://api.makusafe.com/v1/incidentLocation', (resp) => {
+    https.get('https://api.makusafe.com/v1/incidentLocation?id=' + event.data.id, (resp) => {
         let data = '';
 
         // A chunk of data has been recieved.
@@ -29,7 +26,6 @@ exports.subscribe = function subscribe(event, callback) {
         }).on("error", (err) => {
             console.log("Error: " + err.message);
         });
-    */
 
     // Don't forget to call the callback.
     callback();
