@@ -10,8 +10,8 @@ exports.subscribe = function subscribe(event, callback) {
     // The Cloud Pub/Sub Message object.
     const pubsubMessage = event.data;
 
-    Console.log("When are we going to get there?");
-    Console.log(pubsubMessage);
+    console.log("When are we going to get there?");
+    console.log(pubsubMessage);
 
     /*
     https.get('https://api.makusafe.com/v1/incidentLocation', (resp) => {
