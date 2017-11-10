@@ -15,7 +15,7 @@ exports.subscribe = function subscribe(event, callback) {
 
         // A chunk of data has been recieved.
         resp.on('data', (chunk) => {
-          data += chunk;f
+          data += chunk;
         });
        
         // The whole response has been received. Print out the result.
